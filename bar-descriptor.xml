@@ -29,14 +29,15 @@
 	<description>Shell</description>
 
 	<!--  Name of author which is used for signing. Must match the developer name of your development certificate. -->
-	<author>BGmot</author>
+	<author>BerryTrucks</author>
+	<authorId>gYAAgML3SsjiZXhA1d82mdE9DTw</authorId>
 
     <icon>
-       <image>BGshellPlus_icon114x114.png</image>
+       <image>BGshellPlus_icon144x144.png</image>
     </icon>
-    <asset path="assets/BGshellPlus_icon114x114.png">BGshellPlus_icon114x114.png</asset>
+    <asset path="assets/BGshellPlus_icon144x144.png">BGshellPlus_icon144x144.png</asset>
     <asset path="assets">assets</asset>
-    
+
 	<initialWindow>
 		<aspectRatio>portrait</aspectRatio>
 		<autoOrients>false</autoOrients>
@@ -60,11 +61,42 @@
 		<platformArchitecture>x86</platformArchitecture>
 		<asset path="x86/o-g/BGShellBB10" entry="true" type="Qnx/Elf">BGShellBB10</asset>
 	</configuration>
+ <configuration name="Device-Coverage">    <platformArchitecture>armle-v7</platformArchitecture>
+</configuration>
+ <configuration name="Simulator-Profile">    <platformArchitecture>x86</platformArchitecture>
+</configuration>
+ <configuration name="Simulator-Coverage">    <platformArchitecture>x86</platformArchitecture>
+</configuration>
 
 	<!-- Request permission to execute native code.  Required for native applications. -->
 	<permission system="true">run_native</permission>
-    <permission>access_internet</permission>
-    <permission>access_shared</permission>
+ <permission>access_internet</permission>
+ <permission>access_shared</permission>
     <permission>run_when_backgrounded</permission>
+    <permission>bbm_connect</permission>
+    <permission>access_pimdomain_calendars</permission>
+    <permission>use_camera</permission>
+    <permission>use_camera_desktop</permission>
+    <permission>access_pimdomain_contacts</permission>
+    <permission>read_device_identifying_information</permission>
+    <permission>use_gamepad</permission>
+    <permission>access_pimdomain_messages</permission>
+    <permission>access_location_services</permission>
+    <permission>record_audio</permission>
+    <permission>read_personally_identifiable_information</permission>
+    <permission>access_pimdomain_notebooks</permission>
+    <permission>access_notify_settings_control</permission>
+    <permission>access_phone</permission>
+    <permission>read_phonecall_details</permission>
+    <permission>access_pimdomain_calllogs</permission>
+    <permission>control_phone</permission>
+    <permission>post_notification</permission>
+    <permission system="true">_sys_use_consumer_push</permission>
+    <permission system="true">_sys_run_headless</permission>
+    <permission system="true">_sys_headless_nostop</permission>
+    <permission>access_sms_mms</permission>
+    <permission>access_wifi_public</permission>
+
+
 	<env var="LD_LIBRARY_PATH" value="app/native/lib:/usr/lib/qt4/lib"/>
 </qnx>
